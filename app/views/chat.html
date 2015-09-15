@@ -1,13 +1,15 @@
 
-<h2>Chat</h2>
-
-<form>
-  <input placeholder="Message..." ng-model="newMessage">
-  <button type="submit" ng-click="addMessage(newMessage);newMessage = null;">send</button>
-</form>
-
-<ul id="messages" ng-show="messages.length">
-  <li ng-repeat="message in messages | reverse">{{message.text}}</li>
-</ul>
-
-<p class="alert alert-danger" ng-show="err">{{err}}</p>
+<h3><span class="label label-primary"> Nick Nack Chatty Hack Feed the App a Line</span></h3>
+  <div id='chatbox'>
+  <div id='messagesDiv' class='panel panel-primary'
+    <div class="panel-body">
+      <ul class='list-group'>
+        <p ng-repeat='message in messages | reverse'>{{message.text}}</p>
+      </ul>
+    </div>
+    <div class="form-group">
+      <form>
+        <input class='form-control' placeholder="Message..." ng-model="newMessage">
+        <button class='btn btn-primary' type="submit" ng-click="addMessage(newMessage);newMessage = null;">send</button>
+      </form>
+    </div>
